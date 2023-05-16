@@ -73,7 +73,13 @@
 		},
 
 		mounted() {
-			this.todos = JSON.parse(localStorage.getItem('todos')); //get todos dari localstorage dan mengubahnya ke dlm bentuk json
+			try {
+				storedTodos = localStorage.getItem('todos');
+				this.todos = storedTodos ? JSON.parse(storedTodos) : [];
+			} catch (error) {
+				console.error('Error retrieving data from local storage:', error);
+				this.todos = [];
+			}
 		},
 	};
 </script>
