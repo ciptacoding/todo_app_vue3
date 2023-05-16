@@ -1,9 +1,9 @@
 <template>
 	<div>
-		<div class="mx-16 sm:mx-24 my-10 text-center">
+		<div class="mx-4 sm:mx-24 lg:mx-64 xl:mx-96 my-10 text-center">
 			<h1 class="text-gray-700 p-4 bg-white shadow-md rounded-md font-bold text-xl uppercase">Simple Todo App</h1>
 		</div>
-		<div class="bg-white mx-8 p-4 shadow-md rounded-md text-lg">
+		<div class="bg-white mx-4 sm:mx-24 lg:mx-64 xl:mx-96 p-4 shadow-md rounded-md text-lg">
 			<div class="grid grid-cols-3 gap-2 mb-8">
 				<input 
 					@keyup.enter="add" v-model="todo" type="text" 
